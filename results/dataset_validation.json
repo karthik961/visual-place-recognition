@@ -1,0 +1,44 @@
+{
+  "checked_at_utc": "2026-11-12T04:08:01.321866+00:00",
+  "dataset": "medwa126/GardensPointWalking",
+  "data_dir": "/Users/karthikprudhivi/CS_682/Project/cs682_vpr_phase1/data/GardensPoint",
+  "all_sequences_passed": true,
+  "sequences": {
+    "day_left": {
+      "directory_exists": true,
+      "count": 200,
+      "expected_count": 200,
+      "missing": [],
+      "unexpected": [],
+      "corrupted": [],
+      "image_dimensions": {
+        "960x540": 200
+      },
+      "passed": true
+    },
+    "day_right": {
+      "directory_exists": true,
+      "count": 200,
+      "expected_count": 200,
+      "missing": [],
+      "unexpected": [],
+      "corrupted": [],
+      "image_dimensions": {
+        "960x540": 200
+      },
+      "passed": true
+    },
+    "night_right": {
+      "directory_exists": true,
+      "count": 200,
+      "expected_count": 200,
+      "missing": [],
+      "unexpected": [],
+      "corrupted": [],
+      "image_dimensions": {
+        "640x360": 200
+      },
+      "passed": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "model": "ImageNet-pretrained ResNet18, penultimate layer (512D)",
+  "reference": "day_right",
+  "evaluation_note": "Same-index correspondence is approximate; metrics depend on frame alignment.",
+  "experiments": {
+    "day_left": {
+      "recall_at_1": 0.79,
+      "recall_at_5": 0.95,
+      "recall_at_10": 0.99,
+      "queries": 200,
+      "tolerance_frames": 2
+    },
+    "night_right": {
+      "recall_at_1": 0.5,
+      "recall_at_5": 0.78,
+      "recall_at_10": 0.85,
+      "queries": 200,
+      "tolerance_frames": 2
+    }
+  }
+}
