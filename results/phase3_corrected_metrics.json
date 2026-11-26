@@ -33,8 +33,8 @@
         "recall_at_5": 0.97,
         "recall_at_10": 0.99
       },
-      "geometric_verification_seconds": 2.6,
-      "geometric_seconds_per_query": 0.013,
+      "geometric_verification_seconds": 2.579,
+      "geometric_seconds_per_query": 0.0129,
       "reliable_pairs_fraction": 0.437
     },
     "night_right": {
@@ -53,8 +53,8 @@
         "recall_at_5": 0.78,
         "recall_at_10": 0.85
       },
-      "geometric_verification_seconds": 2.211,
-      "geometric_seconds_per_query": 0.0111,
+      "geometric_verification_seconds": 2.203,
+      "geometric_seconds_per_query": 0.011,
       "reliable_pairs_fraction": 0.0445
     }
   },
