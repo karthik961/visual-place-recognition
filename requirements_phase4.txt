@@ -1,0 +1,4 @@
+-r requirements_phase3.txt
+numpy>=1.26
+Pillow>=10.0
+matplotlib>=3.8

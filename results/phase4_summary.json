@@ -1,0 +1,199 @@
+{
+  "dataset": "Gardens Point Walking",
+  "reference": "day_right",
+  "evaluation": "Approximate same-index +/-2 frame tolerance, not GPS ground truth",
+  "important_limitations": [
+    "All 400 query results influenced earlier Phase 3 development; this is not a blinded test.",
+    "Development query indices 0-99 and retrospective evaluation indices 100-199.",
+    "Both splits traverse the same route and share the full 200-image reference gallery.",
+    "Do not interpret these results as generalization to an independent dataset."
+  ],
+  "settings": {
+    "top_k": 10,
+    "tolerance": 2,
+    "orb_features": 1000,
+    "max_width": 640,
+    "inlier_scale": 30.0,
+    "fixed_alpha": 0.7,
+    "phase3_reference": {
+      "geom_bonus": 0.05,
+      "min_inliers": 8,
+      "min_ratio": 0.2
+    },
+    "parameters_tested": 72
+  },
+  "selected_on_development": {
+    "geom_bonus": 0.05,
+    "min_inliers": 4,
+    "min_ratio": 0.2,
+    "development_mean_recall_at_1": 0.74
+  },
+  "geometry_cache": {
+    "loaded_from_cache": false,
+    "verification_seconds": {
+      "day_left": 2.631,
+      "night_right": 2.23
+    }
+  },
+  "full_dataset_metrics": {
+    "day_left": {
+      "deep_baseline": {
+        "recall_at_1": 0.79,
+        "recall_at_5": 0.95,
+        "recall_at_10": 0.99
+      },
+      "fixed_hybrid": {
+        "recall_at_1": 0.355,
+        "recall_at_5": 0.945,
+        "recall_at_10": 0.99
+      },
+      "adaptive_phase3": {
+        "recall_at_1": 0.845,
+        "recall_at_5": 0.97,
+        "recall_at_10": 0.99
+      },
+      "adaptive_selected": {
+        "recall_at_1": 0.86,
+        "recall_at_5": 0.97,
+        "recall_at_10": 0.99
+      }
+    },
+    "night_right": {
+      "deep_baseline": {
+        "recall_at_1": 0.5,
+        "recall_at_5": 0.78,
+        "recall_at_10": 0.85
+      },
+      "fixed_hybrid": {
+        "recall_at_1": 0.25,
+        "recall_at_5": 0.775,
+        "recall_at_10": 0.85
+      },
+      "adaptive_phase3": {
+        "recall_at_1": 0.52,
+        "recall_at_5": 0.78,
+        "recall_at_10": 0.85
+      },
+      "adaptive_selected": {
+        "recall_at_1": 0.525,
+        "recall_at_5": 0.785,
+        "recall_at_10": 0.85
+      }
+    }
+  },
+  "metrics_by_subset": {
+    "development": {
+      "day_left": {
+        "deep_baseline": {
+          "recall_at_1": 0.88,
+          "recall_at_5": 0.97,
+          "recall_at_10": 1.0
+        },
+        "fixed_hybrid": {
+          "recall_at_1": 0.34,
+          "recall_at_5": 0.96,
+          "recall_at_10": 1.0
+        },
+        "adaptive_phase3": {
+          "recall_at_1": 0.84,
+          "recall_at_5": 0.97,
+          "recall_at_10": 1.0
+        },
+        "adaptive_selected": {
+          "recall_at_1": 0.88,
+          "recall_at_5": 0.97,
+          "recall_at_10": 1.0
+        }
+      },
+      "night_right": {
+        "deep_baseline": {
+          "recall_at_1": 0.57,
+          "recall_at_5": 0.82,
+          "recall_at_10": 0.87
+        },
+        "fixed_hybrid": {
+          "recall_at_1": 0.26,
+          "recall_at_5": 0.83,
+          "recall_at_10": 0.87
+        },
+        "adaptive_phase3": {
+          "recall_at_1": 0.57,
+          "recall_at_5": 0.82,
+          "recall_at_10": 0.87
+        },
+        "adaptive_selected": {
+          "recall_at_1": 0.6,
+          "recall_at_5": 0.83,
+          "recall_at_10": 0.87
+        }
+      }
+    },
+    "retrospective_evaluation": {
+      "day_left": {
+        "deep_baseline": {
+          "recall_at_1": 0.7,
+          "recall_at_5": 0.93,
+          "recall_at_10": 0.98
+        },
+        "fixed_hybrid": {
+          "recall_at_1": 0.37,
+          "recall_at_5": 0.93,
+          "recall_at_10": 0.98
+        },
+        "adaptive_phase3": {
+          "recall_at_1": 0.85,
+          "recall_at_5": 0.97,
+          "recall_at_10": 0.98
+        },
+        "adaptive_selected": {
+          "recall_at_1": 0.84,
+          "recall_at_5": 0.97,
+          "recall_at_10": 0.98
+        }
+      },
+      "night_right": {
+        "deep_baseline": {
+          "recall_at_1": 0.43,
+          "recall_at_5": 0.74,
+          "recall_at_10": 0.83
+        },
+        "fixed_hybrid": {
+          "recall_at_1": 0.24,
+          "recall_at_5": 0.72,
+          "recall_at_10": 0.83
+        },
+        "adaptive_phase3": {
+          "recall_at_1": 0.47,
+          "recall_at_5": 0.74,
+          "recall_at_10": 0.83
+        },
+        "adaptive_selected": {
+          "recall_at_1": 0.45,
+          "recall_at_5": 0.74,
+          "recall_at_10": 0.83
+        }
+      }
+    }
+  },
+  "phase3_default_top1_transitions": {
+    "day_left": {
+      "improved": 20,
+      "worsened": 9,
+      "both_correct": 149,
+      "both_wrong": 22
+    },
+    "night_right": {
+      "improved": 5,
+      "worsened": 1,
+      "both_correct": 99,
+      "both_wrong": 95
+    }
+  },
+  "artifacts": [
+    "phase4_parameter_sensitivity.csv",
+    "phase4_failure_cases.csv",
+    "phase4_comparison.png",
+    "phase4_bonus_sensitivity.png",
+    "phase4_failure_cases.png"
+  ]
+}
