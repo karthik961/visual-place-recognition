@@ -46,12 +46,46 @@ https://huggingface.co/datasets/medwa126/GardensPointWalking
 These results use approximate frame-index correspondence
 rather than precise GPS ground truth.
 
-## Phase 3 — Planned
+## Phase 3 — Completed
 
-- ORB feature extraction and matching
-- RANSAC geometric verification
-- Hybrid image retrieval and reranking
-- Comparison against the ResNet18 baseline
+Implemented ORB feature matching and RANSAC-based
+geometric verification for top-10 image reranking.
+
+Compared three retrieval approaches:
+- ResNet18 baseline
+- Fixed-weight hybrid
+- Confidence-gated adaptive hybrid
+
+### Results
+
+| Method | Daytime R@1 | Nighttime R@1 |
+|---|---:|---:|
+| ResNet18 | 79.0% | 50.0% |
+| Fixed Hybrid | 35.5% | 25.0% |
+| Corrected Adaptive Hybrid | 84.5% | 52.0% |
+
+The corrected adaptive approach improved Recall@1
+by 5.5 percentage points during daytime and
+2 percentage points at night.
+
+These are exploratory results on Gardens Point;
+parameters were not selected using a fully
+independent evaluation dataset.
+
+### Running Phase 3
+
+Install dependencies:
+
+    pip install -r requirements_phase3.txt
+
+Run scoring tests:
+
+    python test_scoring.py
+
+Run corrected hybrid retrieval:
+
+    python run_phase3_corrected.py
+
 
 ## Technologies
 
